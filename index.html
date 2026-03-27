@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StageFlex Maroc - Expérience Professionnelle Accessible</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #764ba2;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #764ba2;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
+            color: white;
+            text-align: center;
+            padding: 150px 0 100px;
+            margin-top: 80px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+        }
+
+        .problem-section {
+            background: white;
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .problem-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: center;
+            color: #555;
+        }
+
+        .solution-section {
+            background: #f8f9ff;
+            padding: 100px 0;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .solution-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .solution-card h3 {
+            color: #764ba2;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .stats {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section {
+            background: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 3rem 0 1rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">StageFlex 🇲🇦</div>
+            <ul class="nav-links">
+                <li><a href="#probleme">Le Problème</a></li>
+                <li><a href="#solution">Notre Solution</a></li>
+                <li><a href="#stats">Impact</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Expérience Professionnelle<br>Accessible à Tous</h1>
+            <p>Des stages flexibles et concrets pour booster votre CV avant même l'obtention de votre diplôme</p>
+            <a href="#inscription" class="cta-button">Commencer Maintenant</a>
+        </div>
+    </section>
+
+    <section id="probleme" class="problem-section">
+        <div class="container">
+            <h2 class="section-title">Le Défi des Étudiants Marocains</h2>
+            <div class="problem-content">
+                <p>Au Maroc, de nombreux étudiants rencontrent des difficultés pour accéder à des expériences professionnelles concrètes avant l'obtention de leur diplôme. Les stages traditionnels sont souvent limités, peu accessibles, ou très compétitifs, et beaucoup d'étudiants se retrouvent sans opportunité de mettre en pratique leurs connaissances théoriques.</p>
+                <br>
+                <p><strong>Face à ce constat, il devient essentiel de créer des solutions innovantes</strong> qui permettent aux étudiants d'acquérir de l'expérience professionnelle de manière flexible, concrète et valorisable sur leur CV.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="solution" class="solution-section">
+        <div class="container">
+            <h2 class="section-title">Notre Solution Innovante</h2>
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <h3>🎯 Projets Réels</h3>
+                    <p>Participez à de vrais projets d'entreprises marocaines et gagnez de l'expérience concrète</p>
+                </div>
+                <div class="solution-card">
+                    <h3>⏰ Flexibilité Totale</h3>
+                    <p>Choisissez vos horaires et travaillez à votre rythme, depuis chez vous ou sur site</p>
+                </div>
+                <div class="solution-card">
+                    <h3>📜 Certification Officielle</h3>
+                    <p>Recevez une certification reconnue à ajouter à votre CV et LinkedIn</p>
+                </div>
+                <div class="solution-card">
+                    <h3>💼 Réseautage</h3>
+                    <p>Connectez-vous avec des professionnels et entreprises du Maroc</p>
+                </div>
+                <div class="solution-card">
+                    <h3>🚀 Mentoring</h3>
+                    <p>Bénéficiez d'un accompagnement personnalisé par des experts</p>
+                </div>
+                <div class="solution-card">
+                    <h3>💰 Gratuit</h3>
+                    <p>100% gratuit pour les étudiants - Financé par les entreprises partenaires</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="stats">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Résultats Concrets</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>5K+</h3>
+                    <p>Étudiants formés</p>
+                </div>
+                <div class="stat-item">
+                    <h3>200+</h3>
+                    <p>Entreprises partenaires</p>
+                </div>
+                <div class="stat-item">
+                    <h3>95%</h3>
+                    <p>Taux d'employabilité</p>
+                </div>
+                <div class="stat-item">
+                    <h3>12</h3>
+                    <p>Villes couvertes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <h2 class="section-title">Prêt à Booster Votre CV ?</h2>
+            <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem;">Inscrivez-vous dès aujourd'hui et obtenez votre première expérience professionnelle</p>
+            <a href="#" class="cta-button" style="background: #667eea;">S'inscrire Gratuitement</a>
+            <p style="margin-top: 1rem; color: #999;">Ou contactez-nous : contact@stageflex.ma | +212 6 XX XX XX XX</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 StageFlex Maroc. Tous droits réservés.</p>
+            <p>Transformant l'expérience étudiante au Maroc</p>
+        </div>
+    </footer>
+</body>
+</html>
